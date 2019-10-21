@@ -1,4 +1,7 @@
-"use strict"
+(function () {
+    'use strict';
+    // this function is strict...
+ }());
 const express = require('express');
 const morgan = require('morgan');
 const http = require('http');
@@ -45,8 +48,10 @@ app.get('/weather', (req,res) => {
 });
 
 app.get('/messages', (req, res) => {
-    axios.get('https://54e804af.ngrok.io')
+    axios.get('https://telegram----bot.herokuapp.com/')
     .then((response) => {
+        console.log(response.data);
+
         Message = response.data;
     });
 
