@@ -15,7 +15,7 @@ let Message =""
 const newsApiKey = 'df040e95029945beb880b79a7193482c';
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8084;
 
 app.use(morgan('combined'));
 app.use(compression('BROTLI_MODE_TEXT'));
@@ -48,7 +48,7 @@ app.get('/weather', (req,res) => {
 });
 
 app.get('/messages', (req, res) => {
-    axios.get('https://telegram----bot.herokuapp.com/')
+    axios.get('https://telegram----bot.herokuapp.com/message')
     .then((response) => {
         console.log(response.data);
 
