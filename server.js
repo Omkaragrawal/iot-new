@@ -48,7 +48,7 @@ app.get('/weather', (req,res) => {
 });
 
 app.get('/messages', (req, res) => {
-    axios.get('https://telegram----bot.herokuapp.com/message')
+    axios.get('https://778f99dc.ngrok.io/message')
     .then((response) => {
         console.log(response.data);
 
