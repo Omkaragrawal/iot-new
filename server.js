@@ -48,7 +48,7 @@ app.get('/weather', (req,res) => {
 });
 
 app.get('/messages', (req, res) => {
-    axios.get('https://778f99dc.ngrok.io/message')
+    axios.get('https://778f99dc.ngrok.io/')
     .then((response) => {
         console.log(response.data);
 
