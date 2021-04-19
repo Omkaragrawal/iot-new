@@ -12,7 +12,8 @@ const compression = require('compression');
 
 let Message =""
 
-const newsApiKey = 'df040e95029945beb880b79a7193482c';
+const newsApiKey = 'key';
+const weatherKey = 'key';
 
 const app = express();
 const port = process.env.PORT || 8084;
@@ -41,7 +42,7 @@ app.get('/news', (req, res) => {
 });
 
 app.get('/weather', (req,res) => {
-    axios.get('https://api.darksky.net/forecast/2a08fb2e9c0b81ae9a5cd0022b2cf540/19.275634,72.884537')
+    axios.get(`https://api.darksky.net/forecast/${weatherKey}/19.275634,72.884537`)
     .then(resp => {
         res.send(resp.data);
     });
